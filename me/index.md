@@ -2,10 +2,15 @@
 layout: about
 ---
 
-Hello, my name is Micah Cowell. I am a self proclaimed web developer who likes the internet, hip hop, and fancy yo-yos.
+# Basic info
 
-# What do you do?
-I make website and stuff. All the code I write is on my [Github](https://github.com/getmicah).
+**Name:** Jonathan Peck
 
-# What programming languages do you use?
-When making websites I like using Javascript and Sass. I also like Python and making linux scripts.
+**Occupation:** Student at [Ghent University](http://www.ugent.be/)
+
+**Interests:**
+
+* Machine learning
+* Computational learning theory
+* Complexity theory
+* Cryptography
