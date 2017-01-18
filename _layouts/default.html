@@ -29,6 +29,17 @@ href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
 <body>
 
     <div class="wrapper">
+	<div class="header">
+	    <h1>{{ site.name }}</h1>
+	    <ul>
+	        {% for item in site.data.navigation %}
+	        <li>
+	            <a href="{{ item.url }}">{{ item.title }}</a>
+	        </li>
+	        {% endfor %}
+	    </ul>
+	</div>
+
         {{ content }}
     </div>
 
