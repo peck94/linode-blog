@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Strong passwords"
+title: "Strong Passwords"
 ---
 
 Life is full of deep philosophical problems that have plagued mankind's best minds for ages:
