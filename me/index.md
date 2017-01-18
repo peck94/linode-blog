@@ -15,3 +15,11 @@ layout: about
 * Complexity theory
 * Cryptography
 * Quantum computing
+
+# Links
+
+* [Shtetl-optimized](http://www.scottaaronson.com/blog/)
+* [Computational Complexity](http://blog.computationalcomplexity.org/)
+* [Schneier on Security](https://www.schneier.com/blog/)
+* [Krebs on Security](https://krebsonsecurity.com/)
+* [Good Math/Bad Math](http://www.goodmath.org/blog)
