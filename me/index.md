@@ -23,3 +23,7 @@ layout: about
 * [Schneier on Security](https://www.schneier.com/blog/)
 * [Krebs on Security](https://krebsonsecurity.com/)
 * [Good Math/Bad Math](http://www.goodmath.org/blog)
+
+# Contact
+
+I am usually available [via e-mail](mailto:admin@pecky.be).
