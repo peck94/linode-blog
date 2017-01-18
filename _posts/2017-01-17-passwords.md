@@ -60,11 +60,15 @@ Note the following nice properties:
 1. The size of the password grows logarithmically in the speed of the attacker and the minimal amount of time we want. To show how awesome this is, let's suppose we have a binary 
 alphabet $$A = \{0,1\}$$ and an attacker who can crack a billion passwords per second, ie $$v = 10^9$$. If we want the attacker to require at least one year on average to crack our 
 password, then $$t = 31,556,926$$ and we find $$m \geq 56$$ (rounded up). Now suppose our attacker doubles their speed, so $$v = 2 \times 10^9$$. Then, all else being equal, we 
-find $$m \geq 57$$ (rounded up). Doubling their speed only required us to add a single character to our passwords!
+find $$m \geq 57$$ (rounded up). Doubling their speed only required us to add a single character to our passwords! Moreover, if the size of the alphabet increases to 62 characters 
+(for all alphanumeric uppercase and lowercase symbols), this figure reduces down to ten, and doubling their speed has no effect on this: both at one billion passwords per second and 
+two billion passwords per second, we still only need 10-character passwords over an alphabet of size 62.
 
 2. The size of the alphabet grows linearly in the speed of the attacker and minimal amount of time. It is inversely proportional to the length of the password. Again, to demonstrate, 
 suppose we have an attacker that can crack a billion passwords per second, passwords have length 8 and $$t$$ equals one year. Then $$|A| \geq 126$$. If the attacker doubles 
-their speed, we get $$|A| \geq 138$$, which is an additional 12 characters in the alphabet.
+their speed, we get $$|A| \geq 138$$, which is an additional 12 characters in the alphabet. If passwords are lengthened to 12 characters, these figures reduce to 26 and 27, 
+respectively, meaning a 12-character password need only consist of ordinary lowercase Latin symbols for it to require one year on average to be cracked by an adversary who can process 
+a billion passwords per second.
 
 Things don't look as grim as many people might imagine! Indeed, suppose our alphabet consists of commonly used English words. A conservative estimate might put this number somewhere 
 around 600. Suppose also that we want an attacker to need at least ten years on average to crack our passwords, and that our adversary might have access to supercomputers. This could 
@@ -74,4 +78,4 @@ passwords per second, this still only yields $$m \geq 8$$ when rounded up! The m
 
 >Stop using short, hard-to-remember gibberish as your passwords. Use phrases of at least eight random words. These will be much easier to remember and much more secure.
 
-Of course, there is also a [relevant xkcd](https://xkcd.com/936/).
+Of course, there is also a [relevant xkcd](https://xkcd.com/936/). Also, check out [RANDOM.org](http://www.random.org) for all your randomness needs.
