@@ -14,3 +14,4 @@ layout: about
 * Computational learning theory
 * Complexity theory
 * Cryptography
+* Quantum computing
