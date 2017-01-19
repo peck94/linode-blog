@@ -8,7 +8,7 @@ An interesting question I read on the internet a while ago is the following:
 >Suppose you have an editor that allows you to select, copy and paste any amount of text already written in it.
 Now suppose you want to use that editor to type out some known body of text. What would be the most efficient way to do so?
 
-This is basically a question about *compression*. Given some alphabet $\Sigma$ and the following operations:
+This is basically a question about *compression*. Given some alphabet $$\Sigma$$ and the following operations:
 
 * `Print(a)`: print the symbol `a` to the output;
 
@@ -78,4 +78,61 @@ exist for these purposes), we find we have to perform at most $$i$$ operations i
 This runtime can definitely be improved upon by using faster string searching algorithms, but the point is that it's most certainly polynomial-time.
 
 A much more interesting question is if this algorithm is optimal. The easiest way to prove it's not would be to provide a counter-example: a string that can be produced
-by a shorter copypasta than the one the above algorithm would construct.
+by a shorter copypasta than the one the above algorithm would construct. The key insight is that sometimes, it is more efficient to paste a substring of the text somewhere
+other than the end of the buffer; sometimes we may have to copy a part of the string and paste it right in the middle somewhere. This is something our algorithm will never do,
+and as such it cannot be optimal. For example, suppose we want an optimal copypasta for the following string:
+
+    aaaabbbb
+
+Since this string is so short, our algorithm will output a worst-case copypasta, ie of length 8. There is, however, a more efficient approach:
+
+    Print(a)
+    Print(a)
+    Print(b)
+    Print(b)
+    Copy(1,4)
+    Paste(2)
+
+This copypasta has length 6, which is clearly superior. What's worse, this pattern may be extended as follows. Suppose $$s = a^kb^k$$, ie the symbol `a` repeated $$k$$ times followed by the symbol `b`
+repeated $$k$$ times. Suppose also for simplicity that $$k$$ is a power of two, say $$k = 2^n$$ where $$n \geq 2$$. Then our algorithm will construct the following copypasta:
+
+    Print(a)
+    Print(a)
+    Print(a)
+    Print(a)
+    Copy(1,4)
+    Paste(4)
+    Copy(1,8)
+    Paste(8)
+    ...
+    Copy(1, 2**(k-1))
+    Paste(2**(k-1))
+    Print(b)
+    Print(b)
+    Print(b)
+    Print(b)
+    Copy(2**k+1,2**k+4)
+    Paste(2**k+4)
+    Copy(2**k+1,2**k+8)
+    Paste(2**k+8)
+    ...
+    Copy(2**k+1, 2**k+2**(k-1))
+    Paste(2**k+2**(k-1))
+
+This copypasta has length $$4n$$. However, a better copypasta simply does this:
+
+    Print(a)
+    Print(a)
+    Print(b)
+    Print(b)
+    Copy(1,4)
+    Paste(2)
+    Copy(1,8)
+    Paste(4)
+    ...
+    Copy(1,2**k)
+    Paste(2**(k-1))
+
+This copypasta has length $$2n$$, meaning it will always be half as long as what our algorithm puts out. So in the worst case, our algorithm can produce a copypasta that is still at least
+twice as long as the shortest possible one! Although the nature of the counter-example is very illuminating, it brings us to a rather depressing conclusion: in order to find the smallest
+copypasta for a given string, we would have to do some serious analysis to find out how the structure of the string may be optimally exploited. How this can be done efficiently is not quite clear.
