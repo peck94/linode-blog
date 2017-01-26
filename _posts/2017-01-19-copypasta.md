@@ -136,3 +136,18 @@ This copypasta has length $$4n$$. However, a better copypasta simply does this:
 This copypasta has length $$2n$$, meaning it will always be half as long as what our algorithm puts out. So in the worst case, our algorithm can produce a copypasta that is still at least
 twice as long as the shortest possible one! Although the nature of the counter-example is very illuminating, it brings us to a rather depressing conclusion: in order to find the smallest
 copypasta for a given string, we would have to do some serious analysis to find out how the structure of the string may be optimally exploited. How this can be done efficiently is not quite clear.
+
+It is possible to go completely meta with this. For example, we can construct copypastas that output other copypastas. To do this, suppose we have a copypasta $$P$$ for a string $$s$$ over an
+alphabet $$\Sigma$$. We can then construct a new alphabet $$\Sigma^\prime$$ as follows:
+
+$$\begin{aligned}
+    \Sigma^\prime = \{ \mathrm{Print}(a) \mid a \in \Sigma \} \cup \{ \mathrm{Copy}(i,j) \mid 0 < i \leq j \leq |s| \} \cup \{ \mathrm{Paste}(i) \mid 0 < i \leq |s| \}.
+\end{aligned}$$
+
+The resulting alphabet is clearly still finite. Moreover, $$\Sigma^\prime$$ has the property that every copypasta for a string over $$\Sigma$$ is itself a string over $$\Sigma^\prime$$.
+Hence, using $$\Sigma^\prime$$, we can construct copypastas that output copypastas for strings over $$\Sigma$$. There is no end to how deep one can go with this: repeating the same procedure
+as much as we want, we can obtain copypastas that construct copypastas that construct copypastas ... that construct copypastas for strings over $$\Sigma$$.
+
+Now suppose we have an algorithm $$A$$ written in some programming language $$L$$ that, on input a string $$s$$ over $$\Sigma$$, outputs the optimal copypasta $$s^\star$$.
+Note that, since $$A$$ is written in $$L$$, the code of $$A$$ is itself a string over the alphabet of $$L$$.
+We can supply $$A$$ with its own source code as input and, by definition, it should output an optimal copypasta $$A^\star$$ for itself.
