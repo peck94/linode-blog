@@ -10,8 +10,8 @@ layout: about
 
 **Degrees and awards:**
 
-* [Bachelor of Science in Informatics (2015)](/files/attest_en.pdf)
-* [Honour student at Ghent University (2015)](/files/honour.pdf)
+* [Bachelor of Science in Informatics (2015)](/public/attest_en.pdf)
+* [Honour student at Ghent University (2015)](/public/honour.pdf)
 * Master of Science in Mathematical Informatics (ETA: 2017)
 
 **Interests:**
