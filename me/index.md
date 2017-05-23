@@ -32,4 +32,10 @@ layout: about
 
 # Contact
 
-I am usually available [via e-mail](mailto:admin@pecky.be).
+I am usually available via e-mail.
+To obtain my e-mail address, decrypt the following ciphertext:
+
+    ac3794b75e80425a1cbd1000fc1ced900026a66a21d2ddfd3a3d3a5ad4cd5063
+
+This is a hexadecimal representation of the encryption of my personal e-mail address using AES in CBC mode,
+with the key ``toomanysecrets``.
