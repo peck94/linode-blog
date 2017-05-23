@@ -23,7 +23,7 @@ Each catastrophe also causes a certain amount of damage. To simplify matters, we
 has a single associated cost of repair $$c_i$$ which does not vary by person.
 
 We now want to organise insurance for each of these $$n$$ people, like an insurance company.
-Let the cost of running the company be given by $$d$$. The basic question is this:
+The basic question is this:
 
 >How much do we charge each person in yearly premiums so that the company makes a profit?
 
