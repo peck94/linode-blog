@@ -2,6 +2,7 @@
 title: "A Faster Algorithm or a Faster Computer?"
 date: 2017-01-18
 layout: post
+tags: complexity
 ---
 
 As a dedicated computer nerd, there are but few rare occasions when I venture outside of my little man cave and interact with the world through means that do not involve transistors. 

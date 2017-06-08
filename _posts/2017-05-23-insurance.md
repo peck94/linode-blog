@@ -2,6 +2,7 @@
 title: The Mathematics of Insurance
 date: 2017-05-23
 layout: post
+tags: math
 ---
 The basic idea behind insurance is simple.
 There are certain threats in this world, such as disease or natural disasters, which happen essentially at random

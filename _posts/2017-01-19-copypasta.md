@@ -2,6 +2,7 @@
 title: "The Most Efficient Copypasta"
 date: 2017-01-19
 layout: post
+tags: complexity
 ---
 An interesting question I read on the internet a while ago is the following:
 

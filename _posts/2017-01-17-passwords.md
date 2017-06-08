@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Strong Passwords"
+date: 2017-01-17
+tags: infosec
 ---
 
 Life is full of deep philosophical problems that have plagued mankind's best minds for ages:

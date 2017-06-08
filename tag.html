@@ -1,0 +1,39 @@
+---
+layout: default
+title: Tags
+---
+<div class="post__back">
+  <a href="/">&lt;-- home</a>
+</div>
+
+I use several standard tags to divide all my posts into different categories.
+The tags are
+<ul>
+  <li>ml: anything to do with machine learning, computational learning theory or artificial intelligence;</li>
+  <li>complexity: everything about computational complexity theory and computability theory;</li>
+  <li>infosec: posts regarding information security and cryptography;</li>
+  <li>quantum: posts about quantum computing;</li>
+  <li>math: miscellaneous math posts that don't exactly fit in anywhere;</li>
+  <li>rant: opinion pieces with little mathematical content.</li>
+</ul>
+
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
+  <hr/>
+  <div class="tags-expo-section">
+    {% for tag in site.tags %}
+    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <ul class="tags-expo-posts">
+      {% for post in tag[1] %}
+      <li>
+        <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>

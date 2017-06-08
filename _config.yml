@@ -28,3 +28,6 @@ highlighter: rouge
 
 gems:
  - jekyll-feed
+
+# Tags
+tag_page: '/tag/'
