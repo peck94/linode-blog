@@ -30,4 +30,4 @@ gems:
  - jekyll-feed
 
 # Tags
-tag_page: '/tag/'
+tag_page: '/tag.html'
