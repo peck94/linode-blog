@@ -39,3 +39,9 @@ To obtain my e-mail address, decrypt the following ciphertext:
 </pre>
 This is a hexadecimal representation of the encryption of my personal e-mail address using AES in CBC mode,
 with the key <span style='background-color: black; color: lime; padding: 2px'>toomanysecrets</span>.
+
+If you want to contact me securely via e-mail, you can use [my PGP public key](/public/public.key).
+The SHA-256 checksum of this file is
+<pre style='background-color: black; color: lime; padding: 5px'>
+    08238d590579457228fda8a269db6e26385e86e4c52c055d361c12e65acd8533
+</pre>
