@@ -6,13 +6,13 @@ layout: about
 
 **Name:** Jonathan Peck
 
-**Occupation:** Student at [Ghent University](http://www.ugent.be/)
+**Occupation:** Doctoral student at [Ghent University](http://www.ugent.be/)
 
 **Degrees and awards:**
 
-* [Bachelor of Science in Informatics (2015)](/public/attest_en.pdf)
-* [Honour student at Ghent University (2015)](/public/honour.pdf)
-* Master of Science in Mathematical Informatics (ETA: 2017)
+* [Bachelor of Science in Informatics (2015)](/assets/files/bach.pdf)
+* [Honour student at Ghent University (2015)](/assets/files/honour.pdf)
+* [Master of Science in Mathematical Informatics](/assets/files/msc.pdf)
 
 **Interests:**
 
