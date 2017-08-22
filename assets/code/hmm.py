@@ -48,3 +48,17 @@ plt.ylabel('stock')
 for anomaly in anomalies:
     plt.axvline(anomaly, color='r')
 plt.show()
+
+# sample from the model
+with warnings.catch_warnings():
+    warnings.simplefilter('ignore')
+    _, Z = model.sample(len(series))
+
+for z in Z:
+    loc = model.means_[z][0]
+    scale = np.sqrt(model.covars_[z][0][0])
+    series.append([np.random.normal(loc, scale)])
+
+plt.plot(series)
+plt.axvline(len(series)/2, color='r')
+plt.show()
